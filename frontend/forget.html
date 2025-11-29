@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="reset-box">
+        <h2>Reset Your Account</h2>
+        <p>Enter your email to verify your account.</p>
+
+        <input type="text" id="email" placeholder="Email" required />
+        <button id="checkBtn">Check Account</button>
+
+        <div id="updateSection" style="display:none; margin-top: 20px;">
+          <input type="text" id="firstname" placeholder="First name" required />
+          <input type="text" id="surname" placeholder="Surname" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="New Password"
+            required
+          />
+          <button id="updateBtn">Update Details</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

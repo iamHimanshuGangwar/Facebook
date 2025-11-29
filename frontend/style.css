@@ -1,0 +1,346 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, Arial, sans-serif;
+    background-color:#f0f2f5;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left{
+    width: 50%;
+    padding-left: 150px;
+}
+
+.tagline{
+    font-size: 20px;
+    color: #1c1e21;
+    width: 80%;
+}
+
+.right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #fff;
+  width: 396px;
+  padding: 20px 0 28px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.login-box input {
+  width: 90%;
+  padding: 14px;
+  margin: 6px 0;
+  font-size: 17px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+}
+
+
+.login-btn {
+  width: 90%;
+  background-color: #1877f2;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+.login-btn:hover {
+  background-color: #166fe5;
+}
+
+.forgot {
+  color: #1877f2;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+hr {
+  width: 90%;
+  border: none;
+  border-top: 1px solid #dadde1;
+  margin: 20px 0;
+}
+
+.create-btn {
+  background-color: #42b72a;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background-color: #36a420;
+}
+
+.create-page {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #1c1e21;
+}
+
+.create-page a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.create-page a:hover {
+  text-decoration: underline;
+}
+
+.forgot-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+/*  Modal Styles */
+
+#signupModal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 242, 245, 0.9); /* lighter overlay */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  animation: modalFadeIn 0.25s ease-out;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #1c1e21;
+}
+
+.modal-content p {
+  color: #606770;
+  font-size: 15px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.signup-btn {
+  background-color: #42b72a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.signup-btn:hover {
+  background-color: #36a420;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #606770;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* subtle animation for smooth entry */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px 20px 25px;
+  }
+}
+
+/* style.css */
+
+/* Reset default margins & set font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container centers the reset box */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Reset box styling */
+.reset-box {
+  background-color: #fff;
+  width: 380px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Heading and paragraph */
+.reset-box h2 {
+  color: #1877f2;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.reset-box p {
+  color: #606770;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.reset-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccd0d5;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Button styling */
+.reset-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reset-box button:hover {
+  background-color: #166fe5;
+}
+
+/* Responsive design */
+@media (max-width: 450px) {
+  .reset-box {
+    width: 90%;
+    padding: 20px;
+  }
+  .reset-box h2 {
+    font-size: 20px;
+  }
+}

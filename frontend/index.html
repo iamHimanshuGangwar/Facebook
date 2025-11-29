@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - log in or sign up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1 class="logo">facebook</h1>
+        <p class="tagline">
+          Facebook helps you connect and share with the people in your life.
+        </p>
+      </div>
+
+      <div class="right">
+        <div class="login-box">
+          <input
+            type="text"
+            placeholder="Email address or phone number"
+            id="loginEmail"
+          />
+          <input type="password" placeholder="Password" id="loginPassword" />
+          <button class="login-btn" onclick="login()">Log in</button>
+           <a href="forget.html" class="forgot-link" id="openForgotModal">Forgotten password?</a>
+
+          <hr />
+          <button class="create-btn" id="openModalBtn">
+            Create new account
+          </button>
+        </div>
+        <p class="create-page">
+          <a href="#">Create a Page</a> for a celebrity, brand or business.
+        </p>
+      </div>
+    </div>
+
+    <!--Modal Code for signup code-->
+    <div class="modal" id="signupModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Create a new account</h2>
+        <p>Its quick and easy.</p>
+        <input type="text" id="firstName" placeholder="First name" required />
+        <input type="text" id="surName" placeholder="Surname" required />
+        <input type="text" id="signupEmail" placeholder="Email" required />
+        <input type="password" id="signupPassword" placeholder="Password" required />
+
+        <button class="signup-btn">Sign Up</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
