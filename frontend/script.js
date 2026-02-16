@@ -167,7 +167,6 @@ loginbtn.addEventListener("click", async (e) => {
     alert("Password must be at least 6 characters!");
     return;
   }
-
   fetch("http://localhost:3000/api/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
