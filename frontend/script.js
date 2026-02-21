@@ -39,7 +39,6 @@ if (checkBtn) {
     }
   });
 }
-
 //Update user details
 if (updateBtn) {
   updateBtn.addEventListener("click", async (e) => {
